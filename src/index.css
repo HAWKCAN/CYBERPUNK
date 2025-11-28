@@ -1,1 +1,7 @@
 @import "tailwindcss";
+/* .border-gradient {
+  border: 3px solid transparent;
+  border-radius: 20px;
+  border: linear-gradient(#0000, #0000) padding-box,
+              linear-gradient(to right, #00C8FF, #FF00FF) border-box;
+} */
