@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 export default function ButtonStyle({ to, onClick, type, name }) {
   if (to) {
     return (
-      <div className="w-[200px] h-[70px] rounded-[15px] bg-linear-to-t from-[#FF00FF] to-[#00C8FF]">
+      <div className="cyber-btn w-[200px] h-[70px] hover:bg-black/60 hover:border-white bg-white/60 border-4">
         <Link
-          className=" w-full h-full flex justify-center items-center rounded-md bg-white/0 text-white"
+          className="w-full h-full flex justify-center items-center font-bold text-[25px]  text-black hover:text-white"
           to={to}
         >
           {name}
@@ -18,9 +18,9 @@ export default function ButtonStyle({ to, onClick, type, name }) {
     <button
       onClick={onClick}
       type={type}
-      className="w-[200px] h-[70px] rounded-[15px] bg-linear-to-t from-[#FF00FF] to-[#00C8FF]"
+      className="cyber-btn w-[200px] h-[70px] hover:bg-black/60 hover:border-white bg-white/60 border-4"
     >
-      <div className="w-full h-full flex justify-center items-center rounded-md bg-white/0 text-white">
+      <div className="w-full h-full flex justify-center items-center font-bold text-[25px] text-black hover:text-white">
         {name}
       </div>
     </button>
