@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/SIGN-UP.css" />
+    <title>SIGIN UP</title>
+  </head>
+  <body>
+    <div class="bungkus-signup">
+      <a class="kembali" href="./Dashboard.html"> Kembali </a>
+      <h1>SIGN UP PAGE</h1>
+      <form class="form-signup" action="SIGN_UP" method="POST">
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+        /><br /><br />
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+        /><br /><br />
+
+        <input
+          type="password"
+          id="konfirmasi-password"
+          name="konfirmasi-password"
+          placeholder="Konfirmasi Password"
+        /><br /><br />
+
+        <button class="button-miring" type="submit" value="Sign UP">
+          SIGN UP
+        </button>
+      </form>
+    </div>
+  </body>
+  <script>
+    document
+      .querySelector(".form-signup").addEventListener("submit", function (e) {
+        e.preventDefault();
+        window.location.href = "./pilih-side.html";
+      });
+  </script>
+</html>

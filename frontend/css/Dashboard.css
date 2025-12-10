@@ -1,0 +1,78 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+* {
+  scrollbar-width: none;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button-miring {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  transition: 0.2s ease;
+  backdrop-filter: blur(6px);
+  width: 200px;
+  height: 60px;
+  margin-right: 40px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button-miring:hover {
+  box-shadow: 0 0 15px #00eaff, 0 0 25px #00eaff inset;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  border-color: transparent;
+}
+
+.bungkus-tombol {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  height: 300px;
+  position: absolute;
+  bottom: 80px;
+  left: 120px;
+}
+/* 
+.kiri-side{
+  clip-path: polygon(0 0%, 54.5% 0, 42.5% 100%,0% 100%);
+}
+.kiri-side-a{
+  clip-path: polygon(0 0%, 45.5% 0, 43.5% 100%,0% 100%);
+}
+.kanan-side {
+  clip-path: polygon(54.25% 0, 100% 0, 100% 100%, 42% 100%);
+}
+.kanan-side-a {
+  clip-path: polygon(44% 0, 100% 0, 100% 100%, 42% 100%);
+}
+
+
+/* semacam "mask" sisi kanan, garis miring sama, tapi area sisanya */
+.right-dark {
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+body {
+  background-image: url("../public/back3.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  width: 100dvw;
+  height: 100dvh;
+}
