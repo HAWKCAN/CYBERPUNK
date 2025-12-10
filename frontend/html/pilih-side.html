@@ -1,38 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pilih-side.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/pilih-side.css" />
     <title>PILI SIDEt</title>
-</head>
-<body>
-    <div class="left"></div>
-    <div class="right"></div>
-</body>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+  </head>
+  <body>
+    <div onclick="pilihSide('street')" class="left">
+      <div onclick="pilihSide('police')" class="left-overlay">
+        <div class="left-info">
+          <img src="" alt="" />
+          <h1>hallo</h1>
+        </div>
+      </div>
+      <div class="left-bar">
+        <h1>STREET RACE</h1>
+      </div>
+    </div>
+    <div class="right">
+      <div class="right-overlay">
+        <div class="right-info"><h1>STREET RACE</h1></div>
+      </div>
+      <div class="right-bar">
+        <h1>POLICE</h1>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const leftDiv = document.querySelector(".left");
+      const rightDiv = document.querySelector(".right");
+      const leftOverlay = document.querySelector(".left-overlay");
+      const rightOverlay = document.querySelector(".right-overlay");
+      const leftBar = document.querySelector(".left-bar");
+      const rightBar = document.querySelector(".right-bar");
+      const leftH1 = leftBar.querySelector("h1");
+      const rightH1 = rightBar.querySelector("h1");
 
-    const leftDiv = document.querySelector(".left");
-    const rightDiv = document.querySelector(".right");
-    
-    // leftDiv.addEventListener("onmouseover", function () {
-    //     leftDiv.style.
-       
-    // });
-  
+      function resetBar() {
+        leftBar.style.backgroundColor = "white";
+        rightBar.style.backgroundColor = "black";
+        leftH1.style.color = "black";
+        rightH1.style.color = "white";
+        rightBar.style.opacity = "1";
+        leftBar.style.opacity = "1";
+        leftH1.style.display = "block";
+        rightH1.style.display = "block";
+      }
 
+      resetBar();
+      leftDiv.addEventListener("mouseover", function () {
+        leftDiv.style.transform = "scale(1.05) translateX(40px)";
+        rightDiv.style.transform = "scale(1.05) translateX(40px)";
 
+        leftOverlay.style.opacity = "0";
+        rightOverlay.style.opacity = "1";
 
+        leftBar.style.backgroundColor = "black";
+        rightBar.style.backgroundColor = "white";
+        rightBar.style.opacity = "0.5";
 
+        leftH1.style.color = "white";
+        rightH1.style.color = "black";
+        rightH1.style.display = "none";
+      });
 
+      leftDiv.addEventListener("mouseleave", function () {
+        leftDiv.style.transform = "scale(1.05) translateX(0px)";
+        rightDiv.style.transform = "scale(1.05) translateX(0px)";
 
-});
+        leftOverlay.style.opacity = "0";
+        rightOverlay.style.opacity = "0";
 
-   
+        resetBar();
+      });
+      rightDiv.addEventListener("mouseover", function () {
+        rightDiv.style.transform = "scale(1.05) translateX(-40px)";
+        leftDiv.style.transform = "scale(1.05) translateX(-40px)";
 
+        leftOverlay.style.opacity = "1";
+        rightOverlay.style.opacity = "0";
 
+        // right active → right black, left white
+        leftBar.style.backgroundColor = "white";
+        rightBar.style.backgroundColor = "black";
+        leftBar.style.opacity = "0.5";
 
+        leftH1.style.color = "black";
+        rightH1.style.color = "white";
+        leftH1.style.display = "none";
+      });
 
-</script>
+      rightDiv.addEventListener("mouseleave", function () {
+        rightDiv.style.transform = "scale(1.05) translateX(0px)";
+        leftDiv.style.transform = "scale(1.05) translateX(0px)";
+
+        leftOverlay.style.opacity = "0";
+        rightOverlay.style.opacity = "0";
+
+        resetBar();
+      });
+
+      const username = localStorage.getItem("tempUser");
+      const API =
+        "http://192.169.1.3/projekweb/CYBERPUNK/backend/api/auth/pilihSide.php"; // user dari register
+
+      async function pilih(side) {
+        const res = await fetch(`${API}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username: username,
+            side: side,
+          }),
+        });
+
+        const data = await res.json();
+
+        if (data.status === "success") {
+          localStorage.removeItem("tempUser");
+          localStorage.setItem("username", username);
+          localStorage.setItem("side", side);
+          if (side === "police") {
+            window.location.href = "./Police.html";
+          } else {
+            window.location.href = "./Street.html";
+          }
+        } else {
+          alert(data.msg);
+        }
+      }
+    });
+  </script>
 </html>
