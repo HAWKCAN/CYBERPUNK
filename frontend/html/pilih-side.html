@@ -28,12 +28,25 @@
     </div>
   </body>
   <script>
+    const params = new URLSearchParams(window.location.search);
+    const usernameFromUrl = params.get("user");
+
+    console.log("USERNAME FROM URL:", usernameFromUrl);
+
     async function pilih(side) {
-      const username = localStorage.getItem("tempUser");
+      const username = usernameFromUrl;
       const API =
-        "http://192.168.1.3/projekweb/CYBERPUNK/backend/api/auth/pilihside.php";
+        "http://192.168.1.3/projekweb/CYBERPUNK/backend/api/auth/pilih-side.php";
+
+      if (!username) {
+        alert("Username tidak ditemukan. Silakan register ulang.");
+
+        return;
+      }
 
       try {
+        console.log("KIRIM:", JSON.stringify({ username, side }));
+
         const res = await fetch(API, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -41,9 +54,9 @@
         });
 
         const data = await res.json();
+        console.log("RESPON API:", data);
 
         if (data.status === "success") {
-          localStorage.removeItem("tempUser");
           localStorage.setItem("username", username);
           localStorage.setItem("side", side);
 

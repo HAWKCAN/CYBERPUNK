@@ -10,7 +10,7 @@
     <div class="bungkus-signup">
       <a class="kembali" href="./Dashboard.html"> Kembali </a>
       <h1>SIGN UP PAGE</h1>
-      <form class="form-signup" >
+      <form class="form-signup">
         <input
           type="text"
           id="username"
@@ -73,8 +73,13 @@
 
         if (result.status === "success") {
           alert("Registrasi berhasil! Ayo pilih side.");
-          localStorage.setItem("tempUser", username);
-          window.location.href = "http://192.168.1.3/projekweb/CYBERPUNK/frontend/html/pilih-side.html";
+
+          const redirectUrl =
+            "http://192.168.1.3/projekweb/CYBERPUNK/frontend/html/pilih-side.html" +
+            "?user=" +
+            encodeURIComponent(username);
+
+          window.location.href = redirectUrl;
         } else {
           alert(result.msg);
         }
