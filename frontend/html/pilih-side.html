@@ -31,31 +31,37 @@
     async function pilih(side) {
       const username = localStorage.getItem("tempUser");
       const API =
-        "http://192.168.1.3/projekweb/CYBERPUNK/backend/api/auth/pilih-side.php";
+        "http://192.168.1.3/projekweb/CYBERPUNK/backend/api/auth/pilihside.php";
 
-      const res = await fetch(API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, side }),
-      });
+      try {
+        const res = await fetch(API, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, side }),
+        });
 
-      const data = await res.json();
+        const data = await res.json();
 
-      if (data.status === "success") {
-        localStorage.removeItem("tempUser");
-        localStorage.setItem("username", username);
-        localStorage.setItem("side", side);
+        if (data.status === "success") {
+          localStorage.removeItem("tempUser");
+          localStorage.setItem("username", username);
+          localStorage.setItem("side", side);
 
-        if (side === "police") {
-          window.location.href = "./Police.html";
+          if (side === "police") {
+            window.location.href = "./Police.html";
+          } else {
+            window.location.href = "./Street.html";
+          }
         } else {
-          window.location.href = "./Street.html";
+          alert(data.msg);
         }
-      } else {
-        alert(data.msg);
+      } catch (err) {
+        console.error("Error:", err);
+        alert("Gagal menghubungi server.");
       }
     }
 
+    window.pilih = pilih;
 
     document.addEventListener("DOMContentLoaded", function () {
       const leftDiv = document.querySelector(".left");
