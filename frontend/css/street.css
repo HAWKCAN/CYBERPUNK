@@ -6,8 +6,8 @@
 }
 
 /* Background bikin full screen */
-.bungkus-police{
-    background-image: url(../public/cop_chevy.png); /* default tampilan awal */
+.bungkus-street{
+    background-image: url(../public/Polestar1.png); /* default tampilan awal */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

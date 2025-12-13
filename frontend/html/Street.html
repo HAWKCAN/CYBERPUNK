@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STREET RACE</title>
+    <link rel="stylesheet" href="../css/street.css">
+    <title>POLICE</title>
 </head>
 <body>
-    <h1>ini street</h1>
-    
+
+    <!-- Background mobil -->
+    <div class="bungkus-street" id="bg"></div>
+
+    <!-- Thumbnail pilihan mobil -->
+    <div class="car-selector">
+        <img src="../public/Polestar1.png" onclick="selectCar(0)">
+        <img src="../public/Mustang1.png" onclick="selectCar(1)">
+        <img src="../public/Aventador.png" onclick="selectCar(2)">
+        <img src="../public/Coutach.png" onclick="selectCar(3)">
+        <img src="../public/NissanR34.png" onclick="selectCar(4)">
+    </div>
+
+    <!-- Stats mobil -->
+    <div class="stats" id="stats"></div>
+
+    <script src="../js/street.js"></script>
 </body>
 </html>

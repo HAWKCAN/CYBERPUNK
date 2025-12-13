@@ -1,23 +1,23 @@
 const cars = [
   {
-    bg: "../public/Polestar1.png",
-    stats: { nama: "POLESTAR", detail: "1 Hero Edition '20",power: 9.7, speed: 10, accel: 7.5, handling: 80 },
+    bg: "../public/cop_chevy.png",
+    stats: { nama: "CHEVROLET", detail: "Colorando ZR2 '17",power: 10, speed: 6.7, accel: 7.5, handling: 80 },
   },
   {
-    bg: "../public/Mustang1.png",
-    stats: { nama: "FORD", detail: "Mustang GT '15",power: 8.7,speed: 7.7, accel: 7.1, handling: 85 },
+    bg: "../public/cop_corvette.png",
+    stats: { nama: "CHEVROLET", detail: "Corvette Grand Sport '17",power: 8.7,speed: 10, accel: 9.8, handling: 85 },
   },
   {
-    bg: "../public/Aventador.png",
-    stats: { nama: "LAMBORGINI", detail: "Aventador",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+    bg: "../public/cop_crown.png",
+    stats: { nama: "FORD", detail: "Crown Victoria",power: 4.5,speed: 5.2, accel: 4.2, handling: 60 },
   },
   {
-    bg: "../public/Coutach.png",
-    stats: { nama: "LAMBORGINI", detail: "Countach",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+    bg: "../public/cop_dodge.png",
+    stats: { nama: "DODGE", detail: "Challenger SRT8 '14",power: 9.2,speed: 8.2, accel: 8.0, handling: 65 },
   },
   {
-    bg: "../public/NissanR34.png",
-    stats: { nama: "Nissan", detail: "GTR R34 Nismo",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+    bg: "../public/cop_g500.png",
+    stats: { nama: "Mercedes", detail: "AMG G 63 '17",power: 8.7,speed: 6.2, accel: 7.4, handling: 75 },
   },
 ];
 
