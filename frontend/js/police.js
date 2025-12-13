@@ -1,15 +1,15 @@
 const cars = [
   {
     bg: "../public/Polestar1.png",
-    stats: { speed: 200, accel: 7.5, handling: 80 },
+    stats: { nama: "POLESTAR", detail: "1 Hero Edition '20",power: 9.7, speed: 10, accel: 7.5, handling: 80 },
   },
   {
     bg: "../public/Mustang1.png",
-    stats: { speed: 210, accel: 7.1, handling: 85 },
+    stats: { nama: "FORD", detail: "Mustang GT '15",power: 8.7,speed: 7.7, accel: 7.1, handling: 85 },
   },
   {
     bg: "../public/Polestar3.png",
-    stats: { speed: 230, accel: 8.0, handling: 75 },
+    stats: { nama: "POLESTAR", detail: "1 Hero Edition '20",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
   },
 ];
 
@@ -24,9 +24,12 @@ function selectCar(i) {
 
   const s = cars[i].stats;
   document.getElementById("stats").innerHTML = `
-        <p>Speed: ${s.speed}</p>
-        <p>Acceleration: ${s.accel}</p>
-        <p>Handling: ${s.handling}</p>
+        <h3>${s.nama}</h3>
+        <p>${s.detail}</p>
+        <p>POWER: ${s.power}</p>
+        <p>HIGH SPEED: ${s.speed}</p>
+        <p>ACCELERATION: ${s.accel}</p>
+        <p>HANDLING: ${s.handling}</p>
     `;
 }
 
