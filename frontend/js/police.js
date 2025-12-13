@@ -8,8 +8,16 @@ const cars = [
     stats: { nama: "FORD", detail: "Mustang GT '15",power: 8.7,speed: 7.7, accel: 7.1, handling: 85 },
   },
   {
-    bg: "../public/Polestar3.png",
-    stats: { nama: "POLESTAR", detail: "1 Hero Edition '20",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+    bg: "../public/Aventador.png",
+    stats: { nama: "LAMBORGINI", detail: "Aventador",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+  },
+  {
+    bg: "../public/Coutach.png",
+    stats: { nama: "LAMBORGINI", detail: "Countach",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+  },
+  {
+    bg: "../public/NissanR34.png",
+    stats: { nama: "Nissan", detail: "GTR R34 Nismo",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
   },
 ];
 
