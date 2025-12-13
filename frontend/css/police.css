@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+/* Background bikin full screen */
+.bungkus-police{
+    background-image: url(../public/Polestar1.png); /* default tampilan awal */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100dvw;
+    height: 100dvh;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Bar thumbnail */
+.car-selector{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.car-selector img{
+    width: 120px;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.car-selector img:hover{
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Stats di kanan atas */
+.stats{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    color: white;
+    font-size: 20px;
+    background: rgba(0,0,0,0.35);
+    padding: 15px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: .3s;
+}
