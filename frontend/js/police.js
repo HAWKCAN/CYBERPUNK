@@ -32,13 +32,30 @@ function selectCar(i) {
 
   const s = cars[i].stats;
   document.getElementById("stats").innerHTML = `
-        <h3>${s.nama}</h3>
-        <p>${s.detail}</p>
-        <p>POWER: ${s.power}</p>
-        <p>HIGH SPEED: ${s.speed}</p>
-        <p>ACCELERATION: ${s.accel}</p>
-        <p>HANDLING: ${s.handling}</p>
-    `;
+    <h2>${s.nama}</h2>
+    <p>${s.detail}</p>
+
+    <div class="stat">
+      <span>POWER</span>
+      <div class="bar"><div style="width:${s.power * 10}%"></div></div>
+    </div>
+
+    <div class="stat">
+      <span>HIGH SPEED</span>
+      <div class="bar"><div style="width:${s.speed * 10}%"></div></div>
+    </div>
+
+    <div class="stat">
+      <span>ACCELERATION</span>
+      <div class="bar"><div style="width:${s.accel * 10}%"></div></div>
+    </div>
+
+    <div class="stat">
+      <span>HANDLING</span>
+      <div class="bar"><div style="width:${s.handling}%"></div></div>
+    </div>
+  `;
+
 }
 
 // Default: Polestar 1 ketika halaman pertama kali dibuka

@@ -11,7 +11,7 @@
     <div class="bungkus-signin">
         <a class="kembali" href="./Dashboard.html"> Kembali </a>
       <h1>SIGN IN PAGE</h1>
-      <form class="form-signin" action="SIGN_IN" method="POST">
+      <form class="form-signin" onsubmit="event.preventDefault(); login()">
         <input
           type="text"
           id="username"
@@ -31,4 +31,5 @@
       </form>
     </div>
   </body>
+  <script src="../js/SIGN-IN.js"></script>
 </html>
