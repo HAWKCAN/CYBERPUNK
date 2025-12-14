@@ -9,15 +9,19 @@ const cars = [
   },
   {
     bg: "../public/Aventador.png",
-    stats: { nama: "LAMBORGINI", detail: "Aventador",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+    stats: { nama: "LAMBORGINI", detail: "Aventador S '18",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
   },
   {
     bg: "../public/Coutach.png",
-    stats: { nama: "LAMBORGINI", detail: "Countach",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+    stats: { nama: "LAMBORGINI", detail: "Countach '89",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
   },
   {
     bg: "../public/NissanR34.png",
-    stats: { nama: "Nissan", detail: "GTR R34 Nismo",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+    stats: { nama: "Nissan", detail: "Skyline GT-R V-Spec '99",power: 7.6,speed: 8.2, accel: 8.0, handling: 75 },
+  },
+  {
+    bg: "../public/BMWi8.png",
+    stats: { nama: "BMW", detail: "I8 Coupe '18",power: 8.6,speed: 8.2, accel: 8.2, handling: 75 },
   },
 ];
 
