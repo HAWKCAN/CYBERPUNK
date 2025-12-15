@@ -1,34 +1,34 @@
 const cars = [
   {
-    bg: "../public/cop_chevy.png",
+    bg: "../gambar/cop_chevy.png",
     baseStats: { power: 10, speed: 6.7, accel: 7.5, handling: 80 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
     info: { nama: "CHEVROLET", detail: "Colorado ZR2 '17" }
   },
   {
-    bg: "../public/cop_corvette.png",
+    bg: "../gambar/cop_corvette.png",
     baseStats: { power: 8.7, speed: 10, accel: 9.8, handling: 85 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
     info: { nama: "CHEVROLET", detail: "Corvette Grand Sport '17" }
   },
   {
-    bg: "../public/cop_crown.png",
+    bg: "../gambar/cop_crown.png",
     baseStats: { power: 4.5, speed: 5.2, accel: 4.2, handling: 60 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
     info: { nama: "FORD", detail: "Crown Victoria" }
   },
   {
-    bg: "../public/cop_dodge.png",
+    bg: "../gambar/cop_dodge.png",
     baseStats: { power: 9.2, speed: 8.2, accel: 8.0, handling: 65 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
     info: { nama: "DODGE", detail: "Challenger SRT8 '14" }
   },
   {
-    bg: "../public/cop_g500.png",
+    bg: "../gambar/cop_g500.png",
     baseStats: { power: 8.7, speed: 6.2, accel: 7.4, handling: 75 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },

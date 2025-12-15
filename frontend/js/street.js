@@ -1,41 +1,41 @@
 const cars = [
   {
-    bg: "../public/Polestar1.png",
+    bg: "../gambar/Polestar1.png",
     baseStats: { power: 10, speed: 6.7, accel: 7.5, handling: 80 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
     info: { nama: "POLESTAR", detail: "1 Hero Edition '20"}
   },
   {
-    bg: "../public/Mustang1.png",
+    bg: "../gambar/Mustang1.png",
     baseStats: { power: 10, speed: 6.7, accel: 7.5, handling: 80 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
     stats: { nama: "FORD", detail: "Mustang GT '15",power: 8.7,speed: 7.7, accel: 7.1, handling: 85 },
   },
   {
-    bg: "../public/Aventador.png",
+    bg: "../gambar/Aventador.png",
     baseStats: { power: 10, speed: 6.7, accel: 7.5, handling: 80 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
     stats: { nama: "LAMBORGINI", detail: "Aventador S '18"},
   },
   {
-    bg: "../public/Coutach.png",
+    bg: "../gambar/Coutach.png",
     baseStats: { power: 10, speed: 6.7, accel: 7.5, handling: 80 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
     stats: { nama: "LAMBORGINI", detail: "Countach '89"},
   },
   {
-    bg: "../public/NissanR34.png",
+    bg: "../gambar/NissanR34.png",
     baseStats: { power: 10, speed: 6.7, accel: 7.5, handling: 80 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
     stats: { nama: "Nissan", detail: "Skyline GT-R V-Spec '99"},
   },
   {
-    bg: "../public/BMWi8.png",
+    bg: "../gambar/BMWi8.png",
     baseStats: { power: 10, speed: 6.7, accel: 7.5, handling: 80 },
     stats: {},
     upgrade: { engine: "stock", tires: "stock" },
