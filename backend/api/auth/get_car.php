@@ -1,34 +1,32 @@
 <?php
-require "db.php";
+require "database.php";
 
 $user_id = $_SESSION['user_id'];
 $car_id  = $_GET['car_id'];
 
 $bonus = [
-  'stock'=>0,
-  'sport'=>5,
-  'pro'=>10,
-  'elite'=>18,
-  'ultimate'=>30
+  'stock'=>0,'sport'=>5,'pro'=>10,'elite'=>18,'ultimate'=>30
 ];
 
 $q = "
 SELECT 
-  c.brand, c.model,
-  c.power, c.speed, c.accel, c.handling,
-  uc.engine
+  c.*, 
+  uc.engine_upgrade, 
+  uc.tires_upgrade
 FROM cars c
-LEFT JOIN user_cars uc
-  ON uc.car_id = c.id AND uc.user_id = '$user_id'
-WHERE c.id = '$car_id'
+JOIN user_cars uc 
+  ON uc.car_id=c.id AND uc.user_id='$user_id'
+WHERE c.id='$car_id'
 ";
 
 $r = mysqli_fetch_assoc(mysqli_query($conn,$q));
 
-$engine = $r['engine'] ?? 'stock';
-$boost = $bonus[$engine];
+$engine = $r['engine_upgrade'];
+$tires  = $r['tires_upgrade'];
 
-$r['power'] += $boost;
-$r['speed'] += $boost;
+$r['power'] += $bonus[$engine];
+$r['speed'] += $bonus[$engine]*0.3;
+$r['accel'] += $bonus[$tires]*0.4;
+$r['handling'] += $bonus[$tires];
 
 echo json_encode($r);

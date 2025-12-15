@@ -167,7 +167,7 @@ function saveUpgrade(carIndex) {
       "Content-Type": "application/x-www-form-urlencoded"
     },
     body: new URLSearchParams({
-      car_index: carIndex,
+      car_id: carIndex + 1, // asumsi id mobil di DB mulai dari 1
       engine: upgrade.engine,
       tires: upgrade.tires
     })

@@ -1,23 +1,17 @@
 <?php
-session_start();
-$conn = new mysqli("localhost", "root", "", "cyberpunk_db");
+require "../config/database.php";
 
-$user_id = $_SESSION['user_id'] ?? null;
-$car_id  = $_POST['car_id'] ?? null;
-$engine  = $_POST['engine'] ?? null;
+$user_id = $_SESSION['user_id'];
+$car_id  = $_POST['car_id'];
+$engine  = $_POST['engine'];
+$tires   = $_POST['tires'];
 
-if (!$user_id || !$car_id || !$engine) {
-  http_response_code(400);
-  exit("Data tidak lengkap");
-}
-
-$stmt = $conn->prepare("
-  INSERT INTO car_upgrades (user_id, car_id, engine_tier)
-  VALUES (?, ?, ?)
-  ON DUPLICATE KEY UPDATE engine_tier = VALUES(engine_tier)
+$q = $conn->prepare("
+  UPDATE user_cars
+  SET engine_upgrade=?, tires_upgrade=?
+  WHERE user_id=? AND car_id=?
 ");
-
-$stmt->bind_param("iis", $user_id, $car_id, $engine);
-$stmt->execute();
+$q->bind_param("ssii",$engine,$tires,$user_id,$car_id);
+$q->execute();
 
 echo "OK";
