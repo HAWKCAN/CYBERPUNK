@@ -118,6 +118,78 @@ body {
     transform: scale(1.07);
 }
 
+.actions {
+    position: absolute;
+    top: 310px;
+    left: 40px;
+    width: 500px;
+    z-index: 12;
+}
+
+.actions button {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.after-select {
+    display: flex;
+    gap: 12px;
+}
+
+/* .hidden {
+    display: none;
+} */
+
+
+.after-select button {
+    flex: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Upgrade panel */
+.upgrade-panel {
+    position: absolute;
+    bottom: 280px;
+    left: 40px;
+    width: 500px;
+    padding: 20px;
+
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    z-index: 20;
+}
+
+.upgrade-item {
+    margin-top: 14px;
+}
+
+.tiers {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.tiers button {
+    flex: 1;
+    font-size: 11px;
+    padding: 6px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
 /* =========================
    RESPONSIVE (opsional)
    ========================= */

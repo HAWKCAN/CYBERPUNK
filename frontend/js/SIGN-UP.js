@@ -5,7 +5,7 @@ async function register() {
     "#konfirmasi-password"
   ).value;
   const API =
-    "http://192.168.1.26/projekweb/CYBERPUNK/backend/api/auth/register.php";
+    "http://192.168.0.131/CYBERPUNK/backend/api/auth/register.php";
 
   if (password !== konfirmasiPassword) {
     alert("Konfirmasi password tidak cocok!");
@@ -30,14 +30,14 @@ async function register() {
       alert("Registrasi berhasil! Ayo pilih side.");
 
       const redirectUrl =
-        "http://192.168.1.3/projekweb/CYBERPUNK/frontend/html/pilih-side.html" +
+        "http://192.168.0.131/CYBERPUNK/frontend/html/pilih-side.html" +
         "?user=" +
         encodeURIComponent(username);
 
       window.location.href = redirectUrl;
       localStorage.setItem("tempUser", username);
       window.location.href =
-        "http://192.168.1.26/projekweb/CYBERPUNK/frontend/html/pilih-side.html";
+        "http://192.168.0.131/CYBERPUNK/frontend/html/pilih-side.html";
     } else {
       alert(result.msg);
     }

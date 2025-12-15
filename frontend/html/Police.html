@@ -23,6 +23,42 @@
     <!-- Stats mobil -->
     <div class="stats" id="stats"></div>
 
+    <div class="actions">
+        <button id="btnSelect">PILIH MOBIL INI</button>
+
+        <div class="after-select hidden">
+            <button id="btnChange">GANTI MOBIL</button>
+            <button id="btnUpgrade">UPGRADE MOBIL</button>
+        </div>
+    </div>
+
+    <div class="upgrade-panel hidden" id="upgradePanel">
+        <h3>UPGRADE</h3>
+
+        <div class="upgrade-item">
+            <span>ENGINE</span>
+            <div class="tiers">
+            <button data-tier="stock">STOCK</button>
+            <button data-tier="sport">SPORT</button>
+            <button data-tier="pro">PRO</button>
+            <button data-tier="elite">ELITE</button>
+            <button data-tier="ultimate">ULTIMATE</button>
+            </div>
+        </div>
+
+        <div class="upgrade-item">
+            <span>TIRES</span>
+            <div class="tiers">
+            <button data-tier="stock">STOCK</button>
+            <button data-tier="sport">SPORT</button>
+            <button data-tier="pro">PRO</button>
+            <button data-tier="elite">ELITE</button>
+            <button data-tier="ultimate">ULTIMATE</button>
+            </div>
+        </div>
+    </div>
+
+
     <script src="../js/police.js"></script>
 </body>
 </html>
