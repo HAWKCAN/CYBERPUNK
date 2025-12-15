@@ -158,10 +158,27 @@ document.querySelectorAll(".upgrade-item").forEach(item => {
 /* ================= SAVE / LOAD ================= */
 
 function saveUpgrade(carIndex) {
+  const upgrade = cars[carIndex].upgrade;
+
+  // SIMPAN KE BACKEND
+  fetch("../backend/api/auth/upgrade.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: new URLSearchParams({
+      car_index: carIndex,
+      engine: upgrade.engine,
+      tires: upgrade.tires
+    })
+  });
+
+  // OPTIONAL: tetap simpan lokal buat preview cepat
   const data = JSON.parse(localStorage.getItem("garage") || "{}");
-  data[carIndex] = cars[carIndex].upgrade;
+  data[carIndex] = upgrade;
   localStorage.setItem("garage", JSON.stringify(data));
 }
+
 
 function loadUpgrade() {
   const data = JSON.parse(localStorage.getItem("garage") || "{}");
