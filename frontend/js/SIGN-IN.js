@@ -3,7 +3,7 @@ async function login() {
   const password = document.querySelector("#password").value;
 
   const API =
-    "http://192.168.1.26/projekweb/CYBERPUNK/backend/api/auth/login.php";
+    "/backend/api/auth/login.php";
 
   if (!username || !password) {
     alert("Username dan password wajib diisi");
@@ -30,7 +30,7 @@ async function login() {
 
       // lanjut ke dashboard / pilih side
       window.location.href =
-        "http://192.168.1.26/projekweb/CYBERPUNK/frontend/html/pilih-side.html";
+        "/frontend/html/pilih-side.html";
     } else {
       alert(result.msg);
     }
